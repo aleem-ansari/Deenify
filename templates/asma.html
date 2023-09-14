@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Asma al Husna
+{% endblock %}
+
+{% block main %}
+<main class = "container py-5 text-center">
+    <section class="home">
+        <div class="home-content1">
+        <h1>{{ name }}</h1>
+        </div>
+    </section>
+
+        <h3><i>{{ transliteration }}</i> ({{ number }})</h3>
+        <h6>{{ meaning }}</h6>
+</main>
+{% endblock %}

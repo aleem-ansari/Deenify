@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+<div><h4>Save your settings to access personalized features!</h4><br></div>
+<form action="/settings" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="city" name="city" placeholder="City" type="text" required>
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="country" name="country" placeholder="Country" type="text" required>
+    </div>
+    <div class="mb-3">
+        <label>Prayer Time Calculation Method:
+        <select class="form-control mx-auto w-auto" id="method" name="method" required>
+            <option value="1">University of Islamic Sciences, Karachi</option>
+            <option value="2">Islamic Society of North America</option>
+            <option value="3">Muslim World League</option>
+            <option value="4">Umm Al-Qura University, Makkah </option>
+            <option value="5">Egyptian General Authority of Survey</option></select></label>
+    </div>
+    <button class="btn btn-info" type="submit">Confirm Settings</button>
+</form>
+{% endblock %}

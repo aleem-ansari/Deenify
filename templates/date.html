@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Islamic Dates
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h1>Islamic Date Converter</h1>
+        <form action="/date" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="date" name="date" placeholder="Date" type="date" max="2300-01-01" required>
+            </div>
+            <button class="btn btn-info" type="submit">Convert Date</button>
+        </form>
+    </div>
+    <div>
+        <p>Gregorian Date: {{ from_month }} {{ from_day }}, {{ from_year }}</p>
+        <p>Islamic Date: {{ to_month }} {{ to_day }}, {{ to_year }}</p>
+    </div>
+{% endblock %}

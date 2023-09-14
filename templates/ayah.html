@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ayah Finder
+{% endblock %}
+
+{% block main %}
+<main class = "container py-5 text-center">
+    <section>
+        <div>
+        <h2><i>{{ text }}</i></h2>
+        </div>
+    </section>
+        <p>{{ surah_number }} : {{ ayah_number }}</p>
+</main>
+<div><h4>Search for a keyword in one or all Surahs!</h4><br></div>
+<form action="/ayah" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="keyword" name="keyword" placeholder="Keyword" type="text" required>
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="surah" name="surah" placeholder="Surah" type="number" min="1" max="114">
+    </div>
+    <button class="btn btn-info" type="submit">Search</button>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quran
+{% endblock %}
+
+{% block main %}
+    <form action="/quran" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="page" name="page" placeholder="Page" type="number" min="1" max="604">
+        </div>
+        <button class="btn btn-info" type="submit">Select Page</button>
+    </form>
+    <h3>{{complete_arabic | safe}}</h3>
+
+{% endblock %}
